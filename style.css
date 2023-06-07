@@ -20,12 +20,12 @@
 --COLOR-BLANCO-FONDO:#3a4466;
 --COLOR-BLANCO-LETRA:#ffffff;
 --COLOR-NEGRO-LETRA:#ffffff;
-
+--COLOR-AZUL-BARRA:#212c52;
 }
 
 .navbar{
 overflow: hidden;
-background-color: var(--COLOR-VERDE-BANDERA);
+background-color: var(--COLOR-AZUL-BARRA);
 position: fixed;
 top: 0;
 width: 110%;
