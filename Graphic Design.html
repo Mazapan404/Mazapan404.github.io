@@ -1,0 +1,148 @@
+<html>
+    <body>
+        <script>
+            function includeHTML() {
+              var z, i, elmnt, file, xhttp;
+              /*loop through a collection of all HTML elements:*/
+              z = document.getElementsByTagName("*");
+              for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                  /*make an HTTP request using the attribute value as the file name:*/
+                  xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                      if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                      if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                      /*remove the attribute, and call this function once more:*/
+                      elmnt.removeAttribute("w3-include-html");
+                      includeHTML();
+                    }
+                  }      
+                  xhttp.open("GET", file, true);
+                  xhttp.send();
+                  /*exit the function:*/
+                  return;
+                }
+              }
+            };
+            </script>
+        <head>
+            <link rel="stylesheet" href="style.css">
+        </head> <!--Barra de Navegacion, encuentra como reciclarla sin copiar y pegar esto, crack-->
+        <div w3-include-html="Topbar.html"></div>
+
+        
+        <div class= "ContenidoPagina">
+            <h1>Galeria</h1>
+            
+
+            <div class="GaleriaDibujos">
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/AdeliaCharacters.png">
+                    <img class="Thumb" src="img/Galeria/AdeliaCharacters.png">
+                    </a>
+                    <div class= "descDib">Personajes del corto "Adelia"</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/ChromoxFinal.jpg">
+                    <img class="Thumb" src="img/Galeria/ChromoxFinal.jpg">
+                </a>
+                    <div class= "descDib">Fanart del Pokemon "Chromox"</div>
+              
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/DameDane.png">
+                    <img class="Thumb" src="img/Galeria/DameDane.png">
+                </a>
+                    <div class= "descDib">Parodia de "Hatsune Miku" y "Yakuza 0"</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/DaveStriderFinal2.jpg">
+                    <img class="Thumb" src="img/Galeria/DaveStriderFinal2.jpg">
+                </a>
+                    <div class= "descDib">Dave Strider de "Homestuck"</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/GoForItF.jpg">
+                    <img class="Thumb" src="img/Galeria/GoForItF.jpg">
+                </a>
+                    <div class= "descDib">Parodia de "Go for it, Nakamura!" y "Homestuck"</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/JadeHarley.jpg">
+                    <img class="Thumb" src="img/Galeria/JadeHarley.jpg">
+                </a>
+                    <div class= "descDib">Jade Harley de "Homestuck"</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/KimPine1.jpg">
+                    <img class="Thumb" src="img/Galeria/KimPine1.jpg">
+                </a>
+                    <div class= "descDib">Kim Pine de "Scott Pilgrim"</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/MichuruFull.jpg">
+                    <img class="Thumb" src="img/Galeria/MichuruFull.jpg">
+                </a>
+                    <div class= "descDib">Parodia de "Brand New Animal" y "Team Fortress 2"</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/RoseLalondeFinal.jpg">
+                    <img class="Thumb" src="img/Galeria/RoseLalondeFinal.jpg">
+                </a>
+                    <div class= "descDib">Rose Lalonde de "Homestuck"</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/SixRowFinal.jpg">
+                    <img class="Thumb" src="img/Galeria/SixRowFinal.jpg">
+                </a>
+                    <div class= "descDib">Fanart de distintos personajes</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/JohnSans.jpg">
+                    <img class="Thumb" src="img/Galeria/JohnSans.jpg">
+                </a>
+                    <div class= "descDib">John Egbert de Homestuck y Sans de Undertale</div>
+                   
+                </div>
+
+                <div class= "ImagenDib">
+                    <a target="_blank" href="img/Galeria/John.jpg">
+                    <img class="Thumb" src="img/Galeria/John.jpg">
+                </a>
+                    <div class= "descDib">John Egbert de "Homestuck"</div>
+                   
+                </div>
+
+            </div>
+        </div>
+        
+
+        <script>
+            includeHTML();
+            </script>
+    </body>
+</html>
