@@ -1,19 +1,27 @@
 @font-face {
-    font-family: OpenSans;
-    src: url(fonts/OpenSans-Regular.ttf);
+    font-family: SFPPixelate;
+    src: url(fonts/SFPixelate.ttf);
 }
 
 @font-face {
-    font-family: OpenSans;
-    src: url(fonts/OpenSans-Bold.ttf);
+    font-family: SFPPixelate;
+    src: url(fonts/SFPixelate-Bold.ttf);
     font-weight: bold; 
     }
 
 @font-face {
-    font-family: OpenSans ;
-    src: url(fonts/OpenSans-Italic.ttf);
+    font-family: SFPPixelate;
+    src: url(fonts/SFPixelate-Oblique.ttf);
     font-style: italic;
     }
+
+    @font-face {
+    font-family: SFPPixelate;
+    src: url(fonts/SFPixelate-BoldOblique.ttf);
+    font-style: italic;
+    font-weight: bold;
+    }
+
 
 :root{
 --COLOR-VERDE-BANDERA:#ffffff;
@@ -30,8 +38,8 @@ background-color: var(--COLOR-AZUL-BARRA);
 position: fixed;
 top: 0;
 width: 110%;
-height: 70px;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+height: 50px;
+font-family: SFPPixelate;
 font-size: 15px;
 font-style: italic;
 margin-left: -15px;
@@ -49,7 +57,7 @@ text-decoration: none;
 }
 
 .navbar a:hover {
-background: var(--COLOR-BARRA-HOOVER:#1e1f41;);
+background: var(--COLOR-BARRA-HOOVER);
 }
 
 
@@ -66,8 +74,8 @@ top: 10px;
     position: relative;
     width: 960px;
     margin: 0 auto;
-    font-family: OpenSans;
-    font-size: 20px;
+    font-family: SFPPixelate;
+    font-size: 18px;
     padding-top: 80px;
     padding-left: 10px;
     
@@ -142,7 +150,7 @@ column-count: 2;
 }
 
 .descDib{
-    font-size: 10px;
+    font-size: 11px;
     padding: 8px;
     text-align: center;
 }
@@ -153,7 +161,7 @@ column-count: 2;
 }
 
 .VideoGal:hover {
-    border: 3px solid var(--COLOR-VERDE-BANDERA);
+    border: 2px solid var(--COLOR-VERDE-BANDERA);
 }
 body {
 background-color: var(--COLOR-BLANCO-FONDO);
