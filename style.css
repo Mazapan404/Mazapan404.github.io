@@ -42,8 +42,8 @@ height: 60px;
 font-family: SFPPixelate;
 font-size: 14px;
 font-style: italic;
-margin-left: -15px;
-margin-right: -15px;
+margin-left: -4px;
+margin-right: -4px;
 z-index: 1;
 text-align: center;
 }
@@ -89,7 +89,7 @@ top: 5px;
 }
 
 .ContenidoPagina{
-    position: relative;
+    position: inline-block;
     width: 960px;
     margin: 0 auto;
     font-family: SFPPixelate;
