@@ -42,6 +42,7 @@ height: 60px;
 font-family: SFPPixelate;
 font-size: 14px;
 font-style: italic;
+margin-left: -8px;
 z-index: 1;
 text-align: center;
 }
