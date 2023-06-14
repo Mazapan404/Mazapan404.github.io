@@ -24,13 +24,16 @@
 
 
 :root{
---COLOR-VERDE-BANDERA:#ffffff;
+--COLOR-BLANCO-BASE:#ffffff;
 --COLOR-BLANCO-FONDO:#3a4466;
 --COLOR-BLANCO-LETRA:#ffffff;
---COLOR-NEGRO-LETRA:#ffffff;
 --COLOR-AZUL-BARRA:#212c52;
 --COLOR-BARRA-HOOVER:#3a4466;
+--COLOR-SCROL-BASE:#3f465e;
+--COLOR-SCROL-USO:#181e31;
+--COLOR-SCROL-HOVER:#0a0d18;
 }
+
 
 .navbar{
 overflow: hidden;
@@ -68,13 +71,13 @@ background: var(--COLOR-BARRA-HOOVER);
     width:100%;
     transform: scaleX(0);
     height: 2px;
-    background-color: var(--COLOR-VERDE-BANDERA);
+    background-color: var(--COLOR-BLANCO-BASE);
     transform-origin: bottom right;
     transition: transform 0.35s ease-out;
 }
 
 .navbar a:hover::after{
-    display: blockc;
+    display: block;
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -87,6 +90,26 @@ left: 5px;
 top: 5px;
 }
 
+::-webkit-scrollbar{
+    width:.6em;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--COLOR-SCROL-BASE);
+    border-radius: 100vw;
+    margin-block:.5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--COLOR-SCROL-USO);
+    border: .1em solid var(--COLOR-SCROL-BASE);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--COLOR-SCROL-HOVER);
+}
+
 .ContenidoPagina{
     position: inline-block;
     width: 960px;
@@ -95,8 +118,6 @@ top: 5px;
     font-size: 16px;
     padding-top: 80px;
     padding-left: 10px;
-    
-    
 }
 
 .left{
@@ -107,7 +128,7 @@ top: 5px;
 }
 
 .ContenidoPagina h1{
-    color: var(--COLOR-VERDE-BANDERA);
+    color: var(--COLOR-BLANCO-BASE);
    text-align:center;
 }
 .main{
@@ -115,7 +136,7 @@ text-align: center;
 }
 
 .main h1{
-    color: var(--COLOR-VERDE-BANDERA);
+    color: var(--COLOR-BLANCO-BASE);
    text-align: center;
 }
 
@@ -130,7 +151,7 @@ column-count: 2;
 }
 
 .ColumnaDoble h1{
-    color: var(--COLOR-VERDE-BANDERA);
+    color: var(--COLOR-BLANCO-BASE);
     text-align: right;
 }
 
@@ -154,7 +175,7 @@ margin-right: 20px;
 }
 
 .ImagenDib:hover{
-    border: 3px solid var(--COLOR-VERDE-BANDERA);
+    border: 3px solid var(--COLOR-BLANCO-BASE);
 }
 
 .Thumb{
@@ -185,11 +206,11 @@ margin-right: 20px;
 }
 
 .VideoGal:hover {
-    border: 3px solid var(--COLOR-VERDE-BANDERA);
+    border: 3px solid var(--COLOR-BLANCO-BASE);
 }
 body {
 background-color: var(--COLOR-BLANCO-FONDO);
-color: var(--COLOR-NEGRO-LETRA);
+color: var(--COLOR-BLANCO-LETRA);
 }
 
 
