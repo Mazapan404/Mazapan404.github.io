@@ -1,27 +1,68 @@
 <html>
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        </script>
+
+        <head>
+          <title>Animación</title>
+          <!--<link rel="icon" type="image/x-icon" href="/images/favicon.ico">-->
+          <meta property="og:title" content="Mazapan404" />
+            <meta property="og:description" content="Juegos." />
+            <meta property="og:image" content="img/LogoMini.png" />
+        </head>
+
     <body>
         <head>
             <link rel="stylesheet" href="style.css">
         </head> <!--Barra de Navegacion, encuentra como reciclarla sin copiar y pegar esto, crack-->
-        <div class="navbar">
-            <a href="index.html">Homepage</a>
-            <a href="Gallery.html">Ilustraciones</a>
-            <a href="Animation.html">Animaciones</a>
-            <a href="Games.html">Juegos</a>
-            <a href="Prices.html">Precios</a>
-            <a href="Contact.html">Contactame</a>
-            <img class ="LogoTop" src="img/LogoFinal2.png">
-        </div>
-
+        <div w3-include-html="Topbar.html"></div>
+      
         <div class= "ContenidoPagina">
-            <h1>Juegos</h1>
+            <h1>Animación</h1>
             <div class="main">
                 
-                <p>Juegos, ajua</p>
+            
+            </div>
+            <div class= "ImagenDib">
+                <a target="_blank" href="https://mazapan404.itch.io/asteroids-recreation">
+                <img class="Thumb" src="img\Game_Screenshots\Asteroids.png">
+            </a>
+                <div class= "descDib">Recreación de Asteroids.</div>
+          
+            </div>
+                
             </div>
         </div>
 
-       
+        <script>
+            includeHTML();
+            </script>
 
     </body>
 </html>
