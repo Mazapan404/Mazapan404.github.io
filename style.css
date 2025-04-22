@@ -61,7 +61,7 @@
 
 .navbar{
 overflow: hidden;
-background-color: var(--COLOR-AZUL-BARRA);
+background-image: linear-gradient(to bottom right, #3a4466, #1b264d);
 position: fixed;
 top: 0;
 width: 100%;
@@ -72,6 +72,8 @@ font-style: italic;
 margin-left: -8px;
 z-index: 1;
 text-align: center;
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
 }
 
 .navbar a{
@@ -140,7 +142,7 @@ top: 5px;
     margin: 0 auto;
     font-family: Saira;
     font-size: 16px;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 5px;
@@ -171,8 +173,13 @@ h1{
 
 .ColumnaDoble{
 column-count: 2;
+display: inline-block;
 
+}
 
+.ColumnaGaleria{
+    column-count: 6;
+    display: inline-block;    
 }
 
 .ColumnaDoble p {
@@ -192,15 +199,16 @@ margin-right: 20px;
     height: 350px;
 }
 
-.ImagenDib{
-   
+.ImagenDib{ 
     margin: 5px;
     border: 3px solid var(--COLOR-AZUL-BARRA); 
     border-radius: 5px;
     background-color:var(--COLOR-AZUL-BARRA);
-    float: left;
-    width: 170px;
-    height: 270px;
+    display: inline-block;
+    width: 130px;
+    height: 220px;
+    text-align: center;
+    font-size: 12px;
 }
 
 .ImagenDib:hover{
@@ -208,8 +216,9 @@ margin-right: 20px;
 }
 
 .Thumb{
-    height: 170px;
-    width: 170px;
+    position: center;
+    height: 120px;
+    width: 120px;
 }
 
 .Icon{
@@ -219,19 +228,19 @@ margin-right: 20px;
 }
 
 .descDib{
-    font-size: 11px;
-    padding: 8px;
+    font-size: 12px;
+    padding: 6px;
     text-align: center;
 }
 .VideoGal{
+    display:inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 2px;
-    margin-right: 2px;
     border: 3px solid var(--COLOR-AZUL-BARRA); 
     border-radius: 5px;
     background-color:var(--COLOR-AZUL-BARRA);
-    float: left;
+    text-align: center;
+    font-size: 12px;
 }
 
 .VideoGal:hover {
