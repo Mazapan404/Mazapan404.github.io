@@ -24,19 +24,26 @@
 
 @font-face{
     font-family:Saira;
-    src: url(fonts/SairaExtraCondensed-Medium.ttf);
+    src: url(fonts/Saira-VariableFont_wdth\,wght.ttf);
 }
 
 @font-face{
     font-family:Saira;
-    src: url(fonts/SairaExtraCondensed-Bold.ttf);
+    src: url(fonts/Saira-VariableFont_wdth\,wght.ttf);
     font-weight:bold;
 }
 
 @font-face{
     font-family:Saira;
-    src: url(fonts/SairaExtraCondensed-Thin.ttf);
+    src: url(fonts/Saira-Italic-VariableFont_wdth\,wght.ttf);
     font-style:italic;
+}
+
+@font-face{
+    font-family:Saira;
+    src: url(fonts/Saira-Italic-VariableFont_wdth\,wght.ttf);
+    font-style:italic;
+    font-weight: bold;
 }
 
 
@@ -152,7 +159,7 @@ top: 5px;
 text-align: center;
 }
 
-.main h1{
+h1{
     color: var(--COLOR-BLANCO-BASE);
    text-align: center;
    font-family: SSFPPixelate;
